@@ -76,11 +76,11 @@ const Homepage = () => {
         <Avatar className="md:h-24 md:w-24 w-16 h-16 mr-4">
           <AvatarImage src={user.avatar || "https://github.com/shadcn.png"} />
           <AvatarFallback>
-            {user.name && user.name[0] ? user.name[0] : "?"}
+            {user.userName && user.userName[0] ? user.userName[0] : "?"}
           </AvatarFallback>
         </Avatar>
         <div className="md:text-4xl text-2xl font-bold">
-          <h2>{user.name}</h2>
+          <h2>{user.userName}</h2>
         </div>
       </div>
       <div className="bg-white shadow-md rounded-lg p-6">
@@ -91,17 +91,17 @@ const Homepage = () => {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-2">Phone No:</h3>
-            <p>{user.phone}</p>
+            <p>{user.phoneNo}</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-2">
               Educational Qualification:
             </h3>
-            <p>{user.education}</p>
+            <p>{user.educationalQualification}</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-2">Current Location:</h3>
-            <p>{user.location}</p>
+            <p>{user.currentLocation}</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-2">City/State:</h3>
@@ -112,7 +112,7 @@ const Homepage = () => {
           <h3 className="text-lg font-semibold mb-2">
             Additional Information:
           </h3>
-          <p>{user.additionalInfo}</p>
+          <p>{user.additionalInformation}</p>
         </div>
       </div>
     </div>

@@ -17,7 +17,11 @@ const UserSchema = new mongoose.Schema({
     otp: {
         type: String,
         default: null
-    }
+    },
+    courses: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Course"
+      }]
 },{
     timestamps: true
 })

@@ -1,4 +1,4 @@
-import { User } from "../models/User.model.js";
+import { User } from "../models/user.model.js";
 import sendMail from "../nodeMailer/sendGmail.js";
 import jwt from "jsonwebtoken";
 
@@ -73,18 +73,22 @@ export const loginWithOtp = async (req, res) => {
       });
     }
 
-    user.otp = null; // Clear the OTP after login
+    user.otp = null; 
     await user.save();
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
-      expiresIn: "1h"
-    });
+    const tokenData = {
+        userId: user._id
+    }
 
-    return res.status(200).json({
-      success: true,
-      message: "Logged in successfully",
-      token
-    });
+    const token = await jwt.sign(tokenData, process.env.JWT_SECRET, {
+        expiresIn: "1d"
+    })
+
+    return res.status(200).cookie("token", token, { maxAge: 24 * 60 * 60 * 1000, httpOnly: true, sameSite: 'strict' }).json({
+        _id: user._id,
+        name: user.name,
+        success: true
+    })
 
   } catch (error) {
     console.log(error);

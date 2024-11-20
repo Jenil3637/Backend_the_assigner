@@ -13,8 +13,6 @@ These APIs facilitate a secure and efficient registration and login system with 
 
 RESULTS!!! 
 
-![Screenshot 2024-11-19 143237](https://github.com/user-attachments/assets/94b68cf3-26bd-48a6-9c9d-56ff0f416e0e)
-![Screenshot 2024-11-19 143331](https://github.com/user-attachments/assets/bd1121c3-a6cc-4252-84d1-b8812ef09c52)
 ![Screenshot 2024-11-20 134631](https://github.com/user-attachments/assets/581cb153-5be5-42f6-b5f4-9079aebdda8a)
 ![Screenshot 2024-11-20 134645](https://github.com/user-attachments/assets/a16b7bb2-738c-4460-8435-ddb274c8d7fe)
 ![Screenshot 2024-11-20 134656](https://github.com/user-attachments/assets/eb9b36a6-cb92-4544-a6f7-0bccf76187a8)
